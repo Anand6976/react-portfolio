@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Kalam', cursive;
+}
+
+:root {
+    --light-background: #fff;
+    --dark-background: rgba(35, 39, 60, 1);
+    --light-text: #000;
+    --dark-text: #fff;
+    --light-linkActive: #dd6b20;
+    --dark-linkActive: #66c7fa;
+    --light-linkHover: #d99a5a;
+    --dark-linkHover: #bfe9ff;
+    --light-btnColor: #dd6b20;
+    --dark-btnColor: #188cff;
+    --light-footerBg: white;
+    --dark-footerBg: rgba(52, 57, 83, 1);
+}
+
+html {
+    --background: var(--light-background);
+    --textColor: var(--light-text);
+    --linkActive: var(--light-linkActive);
+    --linkHover: var(--light-linkHover);
+    --btnBg: var(--light-btnColor);
+    --footerBg: var(--light-footerBg);
+}
+
+html.dark {
+    --background: var(--dark-background);
+    --textColor: var(--dark-text);
+    --linkActive: var(--dark-linkActive);
+    --linkHover: var(--dark-linkHover);
+    --btnBg: var(--dark-btnColor);
+    --footerBg: var(--dark-footerBg);
+}
+
+@keyframes bounce-y-reduced {
+
+    0%,
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-15px);
+        /* Adjust the bounce height */
+    }
+
+    75% {
+        transform: translateY(-15px);
+        /* Adjust the bounce height */
+    }
+}
+
+@keyframes bounce-x-reduced {
+
+    0%,
+    50%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-15px);
+        /* Adjust the bounce height */
+    }
+
+    75% {
+        transform: translateX(-15px);
+        /* Adjust the bounce height */
+    }
+}
+
+.animate-bounce-y-reduced {
+    animation: bounce-y-reduced 5s infinite;
+    /* Adjust the animation duration */
+}
+
+.animate-bounce-x-reduced {
+    animation: bounce-x-reduced 5s infinite;
+    /* Adjust the animation duration */
+}
